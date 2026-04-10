@@ -22,14 +22,15 @@ const DEFAULT_FAQS: FAQItem[] = [
   { question: 'How long does the ceremony typically last?', answer: "A typical ceremony lasts around 20–40 minutes, depending on how many readings, rituals and personal touches you include. We\'ll work out the timing together during our run-through meeting so it feels just right." },
 ]
 
-export function FAQSection({ title = 'Frequently Asked Questions', faqs = DEFAULT_FAQS }: FAQSectionProps) {
+export function FAQSection({ title = 'Frequently Asked Questions', faqs }: FAQSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const faqList = faqs ?? DEFAULT_FAQS
 
   return (
     <div className={styles.faqs}>
       <h2>{title}</h2>
       <div className={styles.faqList}>
-        {faqs.map((faq, i) => (
+        {faqList.map((faq, i) => (
           <div key={i} className={`${styles.faqItem} ${openIndex === i ? styles.open : ''}`}>
             <button
               className={styles.faqQuestion}
