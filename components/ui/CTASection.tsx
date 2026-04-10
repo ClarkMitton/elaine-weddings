@@ -20,7 +20,7 @@ export function CTASection({
       <p className="section-label">{label}</p>
       <h2>{title}</h2>
       <p>{body}</p>
-      <Link href={buttonHref} className="btn-primary">{buttonLabel}</Link>
+      <Link href={buttonHref || '/contact'} className="btn-primary">{buttonLabel || 'Get in Touch'}</Link>
     </section>
   )
 }

@@ -62,10 +62,10 @@ export default async function HomePage() {
           <h1 className={styles.heroTitle}>{heroTitle}</h1>
           <p className={styles.heroSubtitle}>{heroSubtitle}</p>
           <div className={styles.heroCtas}>
-            <Link href={data?.heroPrimaryCtaHref ?? '/contact'} className="btn-primary">
+            <Link href={data?.heroPrimaryCtaHref || '/contact'} className="btn-primary">
               {data?.heroPrimaryCtaLabel ?? 'Start Planning'}
             </Link>
-            <Link href={data?.heroGhostCtaHref ?? '/why-choose-me'} className="btn-ghost">
+            <Link href={data?.heroGhostCtaHref || '/why-choose-me'} className="btn-ghost">
               {data?.heroGhostCtaLabel ?? 'Meet Elaine'}
             </Link>
           </div>
