@@ -23,6 +23,7 @@ const singletonListItem = (S: any, typeName: string, title: string) =>
 export default defineConfig({
   name: 'elaine-weddings',
   title: 'Elaine Weddings',
+  basePath: '/studio',
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET!,
   plugins: [
