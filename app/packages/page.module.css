@@ -1,0 +1,197 @@
+.packagesSection {
+  background: var(--offwhite);
+  padding: 7rem 6rem;
+}
+
+.packagesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.packageCard {
+  background: var(--white);
+  border: 1px solid var(--stone);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+}
+.packageCard:hover {
+  box-shadow: 0 16px 50px rgba(30,58,138,0.1);
+}
+
+.packageHeader {
+  padding: 2.5rem 2.5rem 2rem;
+  color: #fff;
+}
+
+.packageName {
+  font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.packageTagline {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 0.3rem;
+  line-height: 1.5;
+}
+
+.packageSubTagline {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.65);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-top: 1.2rem;
+}
+
+.pricePrefix {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.7);
+}
+
+.price {
+  font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.packageBody {
+  padding: 2rem 2.5rem;
+  flex: 1;
+}
+
+.packageIntro {
+  font-size: 0.95rem;
+  color: var(--mid);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.listLabel {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mid);
+  opacity: 0.6;
+  margin-bottom: 0.8rem;
+}
+
+.packageList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.packageList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.93rem;
+  color: var(--mid);
+  line-height: 1.6;
+}
+
+.footerNote {
+  margin-top: 1.5rem;
+  font-style: italic;
+  font-size: 0.88rem;
+  color: var(--mid);
+  opacity: 0.6;
+  line-height: 1.7;
+}
+
+.packageFooter {
+  padding: 1.5rem 2.5rem 2.5rem;
+}
+
+/* Extras */
+.extrasSection {
+  background: var(--deep);
+  color: var(--cream);
+  padding: 7rem 6rem;
+  text-align: center;
+}
+.extrasSection h2 { color: #fff; }
+.extrasSection .section-label { color: var(--teal); }
+
+.extrasSub {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.97rem;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.extrasGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.extrasTag {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.85);
+  padding: 0.7rem 1.5rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  border-radius: 2px;
+  transition: background 0.2s, border-color 0.2s;
+}
+.extrasTag.featured {
+  background: rgba(241,58,123,0.2);
+  border-color: rgba(241,58,123,0.5);
+  font-size: 0.95rem;
+  padding: 0.8rem 2rem;
+}
+.extrasTag:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: rgba(255,255,255,0.4);
+}
+
+.quoteStrip {
+  background: var(--cream);
+  text-align: center;
+  padding: 4rem 6rem;
+  border-top: 1px solid var(--stone);
+  border-bottom: 1px solid var(--stone);
+}
+
+.quoteText {
+  font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+  font-size: clamp(1.2rem, 2.2vw, 1.7rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--deep);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .packagesSection { padding: 5rem 2rem; }
+  .packagesGrid { grid-template-columns: 1fr; }
+  .extrasSection { padding: 5rem 2rem; }
+  .quoteStrip { padding: 3rem 2rem; }
+}
